@@ -1,0 +1,483 @@
+.login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+  }
+  
+  .login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .login-box .user-box {
+    position: relative;
+  }
+  
+  .login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+  .login-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: orange;
+    font-size: 12px;
+  }
+  
+  .login-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: orange;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+  }
+  
+  .login-box a:hover {
+    background: orange;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px orange,
+                0 0 25px orange,
+                0 0 50px orange,
+                0 0 100px orange;
+  }
+  
+  .login-box a span {
+    position: absolute;
+    display: block;
+  }
+  
+  .login-box a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, orange);
+    animation: btn-anim1 1s linear infinite;
+  }
+  
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent,orange);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+  }
+  
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent,orange);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+  }
+  
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, orange);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+  }
+  
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+  }
+  
+  input.login-box {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: aliceblue;
+    width:200px;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-Top:20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px orange, 0 0 25px orange, 0 0 50px orange, 0 0 100px orange;
+    transition: .5s;
+  }
+  
+  input.login-box:hover {
+    background: orange;
+    color: black;
+  }
+  
+  #sina{
+    font-size: 15px;
+    margin-Top:80px;
+    text-transform: none;
+  }
+
+
+
+  /*css main page*/
+  
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+header{
+background-color: #C7CDC2;
+width: 100%;
+position: fixed;
+z-index: 999; /* ظاهر nav bar (header)حتى لمة تنزل في الصفحة لتحت يضل ال*/
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px 200px;
+}
+.logo{
+text-decoration: none;
+color: orange;
+text-transform: uppercase;
+font-weight: 700;
+font-size: 1.8em;
+}
+.navigation a{
+text-decoration: none;
+ color: orange;
+font-size: 1.1em;
+font-weight: 500;
+padding-left: 30px;
+}
+.navigation a:hover{
+color:orange;
+}
+section{
+   padding: 100px 200px; 
+}
+.main{
+   width:100%; 
+   min-height: 100vh; /* يعني  اقل شئ يكون هذه القيمة و لكن ممكن يزيد*/
+   display: flex;
+   align-items: center;
+   background:url(img/c4.jpg) no-repeat;
+   background-size: cover;
+   background-position: center;/* الصورة تظهر من النصف*/
+background-attachment: fixed;
+}
+.main h2{
+    color: #fff;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.main h2 span{
+display: inline-block;/*spanلل  margin and paddingحتى تقدر تضيف */
+margin-top: 10px;
+color:orange;
+   font-size: 3em;
+   font-weight: 600; 
+}
+.main h3{
+color:#fff;
+font-size: 2em;
+font-weight: 700;
+letter-spacing: 1px; /* بتبعد مسافة بسيطة بين الكلام (بتعطي منظر اكثر جمالية)*/
+margin-top: 10px;
+margin-bottom: 30px;
+}
+
+.main-btn{
+   color:white;
+   background-color:orange;
+   text-decoration: none;
+   font-size: 1.1em;
+   font-weight: 600;
+   display: inline-block;
+   padding: 0.9375em 2.1875em;
+   letter-spacing: 1px; /* بتبعد مسافة بسيطة بين الكلام (بتعطي منظر اكثر جمالية)*/
+  border-radius: 15px;/*مدورة button حت تخلي حواف */
+  margin-bottom: 40px;
+transition: 0.7s ease;/*حتى تسرع تاثير الtransform  هيه تحتك*/
+}
+.main-btn:hover{ 
+    color: black;
+  background-color:orange;
+  transform: scale(1.1); /*  حتى عندما بدك تكبس على الزر يعطيك تاثير امن كبر ( تاثير جميل)*/ 
+}
+.social-icons a{
+   color:orange; /* حتي تغير لون icons*/
+   font-size: 1.7em;
+   padding-right: 30px;/* حتى يكون في مسافة بينهم*/ 
+}
+.title{
+   display: flex;
+    justify-content: center;
+    color:orange;
+    font-size: 2.2em;
+font-weight: 800;
+margin-bottom: 30px;
+}
+.content{
+  display: flex;
+  justify-content: center;
+ flex-direction: row;  
+flex-wrap: wrap; /* حتى لو تخطى حجم الكروت حجم الصفحة ما تصغر الكروت بل تنزل لتحت*/
+
+}
+
+.card{
+  background-color:#fff;
+  width: 21.25em;
+  box-shadow: 0 5px 25px rgba(1 1 1/15%);
+border-radius: 15px;
+padding: 25px;
+margin: 15px;
+transition: 0.7s ease;
+}
+.card :hover{
+    transform: scale(1.1);
+}
+.card .icon {
+    color: orange;
+    font-size: 8em;
+    text-align: center;
+}
+.info {
+    text-align: center;
+}
+
+.info h3{
+    color: orange;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.projects {
+    background-color: #000016;
+}
+
+.projects .content{
+    margin-top: 30px;
+}
+
+.project-card {
+    background-color: #fff;
+    border: 1px solid #fff;
+    min-height: 14em;
+    width: 23em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: 0.7s ease;
+}
+
+.project-card:hover {
+   transform: scale(1.1);
+}
+
+.project-card:hover .project-image {
+    opacity: 0.9;
+ }
+
+.project-image img{
+    width: 100%
+}
+
+.project-info {
+    padding: 1em;
+}
+
+.project-category {
+    font-size: 0.8em;
+    color: #000;
+}
+.project-title {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.more-details {
+    text-decoration: none;
+    color: orange;
+}
+
+.more-details:hover {
+    color: orange;
+}
+
+.contact .icon{
+    font-size: 4.5em;
+}
+
+.contact .info h3 {
+    color: #000;
+}
+
+.contact .info p {
+    font-size: 1.5em;
+}
+
+.footer {
+    background-color: #000016;
+    color: #fff;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-title {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.footer-title span {
+    color: orange;
+}
+
+.footer .social-icons a{
+    font-size: 1.3em;
+    padding: 0 12px 0 0;
+}
+
+@media (max-width:1023px){
+    header{
+        padding: 12px 20px;
+    }
+
+    .navigation a{
+        padding-left: 10px;
+    }
+
+    .title{
+        font-size: 1.8em;
+    }
+
+    section{
+        padding: 80px 20px;
+    }
+
+    .main-content h2{
+        font-size: 1em;
+    }
+
+    .main-content h3{
+        font-size: 1.6em;
+    }
+
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media (max-width:641px){
+    body{
+        font-size: 12px;
+    }
+
+    .main-content h2{
+        font-size: 0.8em;
+    }
+
+    .main-content h3{
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width:300px){
+    body{
+        font-size: 10px;
+     
+    }
+}
+
+
+.about{
+    background-color: #eee;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    line-height: 1.7;
+}
+
+.about h1{
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+.about p{
+    font-size: 20px;
+}
